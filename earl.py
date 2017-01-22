@@ -16,12 +16,22 @@ def main():
     alias_dict = {}
 
     for f in args.file:
-        for line in f:
-            alias = line[:line.index(":")]
+        alias_list = open(f, 'r')
+        for line in alias_list:
+            if "#" == line[0] or ":" not in line:
+                continue
+            alias = line[:line.index(":")].strip(" \n")
             name = line[line.index(":") + 1:]
-            if alias in alias_dict.keys():
+            print(name)
+            if alias in args.alias:
+                if alias in alias_dict.keys():
+                    alias_set = alias_dict[alias]
+                    alias_dict[alias] = alias_set.add(name)
+                else:
+                    alias_dict[alias] = {name}
 
- 
+    for alias in args.alias:
+        print(alias + ":" + str(alias_dict[alias]))
 
 
 if __name__ =="__main__":
