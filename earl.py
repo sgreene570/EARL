@@ -32,7 +32,7 @@ def main():
 
     for alias in args.alias:
         print(alias + ": " + 
-            str(alias_dict[alias]).replace("'", "").strip("{}'"))
+            str(alias_dict[alias]).replace("'", "").strip("{}"))
 
 
 if __name__ =="__main__":

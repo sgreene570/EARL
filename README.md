@@ -7,5 +7,3 @@ A simple python script to parse alias files and output corresponding names or em
 Could easily be pipelined into other services.
 <br>
 Goal is to implement this script in other languages (maybe C?)
-
-
