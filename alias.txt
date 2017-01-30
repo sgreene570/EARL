@@ -1,7 +1,0 @@
-# /etc/aliases
-rtp: loothelion
-drink: zachhart
-rtp: ehouse
-eboard: rhacker
-weird: purple
-weird: mark
